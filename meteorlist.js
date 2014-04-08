@@ -5,6 +5,12 @@ if (Meteor.isClient) {
     return "Welcome to meteorlist.";
   };
 
+  Template.home.allPosts = function () {
+    return Posts.find({}, {
+      sort: {title: -1}
+    });
+  }
+
   Template.home.events({
     'click input': function () {
       // template data, if any, is available in 'this'
