@@ -4,10 +4,30 @@
 
 <template name="home">
   <h1>Hello World!</h1>
-  {{greeting}}
+  {{#each allPosts}}
+    <h3>{{title}} - {{price}}</h3>
+    <p>{{description}}</p>
+  {{/each}}
   <input type="button" value="Click" />
 </template>
 
 <template name="goodbye">
   <h1>See ya!</h1>
+</template>
+
+<template name="post">
+  <form class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label" for="title">Title</label>
+      <input type="text" id="title" placeholder="Title"/>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="price">Price</label>
+      <input type="text" id="price" placeholder="Price"/>
+    </div>
+    <div class="controlp-group">
+      <label class="control-label" for="description">Description</label>
+      <textarea id="description" placeholder="Description"></textarea>
+    </div>
+  </form>
 </template>
