@@ -1,9 +1,11 @@
+Posts = new Meteor.Collection('posts');
+
 if (Meteor.isClient) {
-  Template.hello.greeting = function () {
+  Template.home.greeting = function () {
     return "Welcome to meteorlist.";
   };
 
-  Template.hello.events({
+  Template.home.events({
     'click input': function () {
       // template data, if any, is available in 'this'
       if (typeof console !== 'undefined')
