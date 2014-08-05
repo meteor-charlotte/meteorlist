@@ -1,5 +1,3 @@
-Posts = new Meteor.Collection('posts');
-
 if (Meteor.isClient) {
   Template.home.greeting = function () {
     return "Welcome to meteorlist.";
