@@ -5,15 +5,11 @@ postsSchemaObject = {
   },
   price: {
     type: Number,
-    max: 8
+    max: 99999
   },
   description: {
     type: String,
     max: 250
-  },
-  type: {
-    type: String,
-    max: 100
   }
 };
 
